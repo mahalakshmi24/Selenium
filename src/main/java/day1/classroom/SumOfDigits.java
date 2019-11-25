@@ -26,13 +26,22 @@ public class SumOfDigits {
 		
 
 		// Initialize an integer variable by name: sum
-		int sum;
+		int sum=0;
 		// Use loop to calculate the sum: which loop to use until the number goes less than 10??
-
+		
+		int m;
+		
+		while(a>0)    
+		{    
+		m=a%10;    
+		sum=sum+m;    
+		a=a/10;    
+		}    
 		// Within loop: get the remainder when done by 10 -> Tip: use mod
-
+		System.out.println(sum);
 			// Print the remainder to confirm
 	
+	}
 			// Within loop: add that remainder to the sum
 	
 			// Print the sum to confirm
@@ -44,4 +53,3 @@ public class SumOfDigits {
 		// Outside the loop: print the final sum
 	}
 
-}

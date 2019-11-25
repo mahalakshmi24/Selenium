@@ -27,9 +27,22 @@ public class PrimeNumber {
 		// Declare a boolean input as flag
 		boolean flag;
 		// Iterate from 1 to half of the input
-		
+		for(int i=2; i<=a/2; i++)
+		{
 			// Divide the input with each for loop variable and check the remainder
-			
+			a=a%i;
+					if(a==0)
+					{
+						System.out.println("not a prime number");
+					}
+					
+					
+		else
+			System.out.println("prime number");
+		}
+		}
+	
+		}
 				// Set the flag as true when there is no remainder
 				
 				// break the iterator
@@ -42,6 +55,4 @@ public class PrimeNumber {
 			
 		
 
-	}
 
-}

@@ -24,14 +24,21 @@ public class ArmstrongNumber {
 		
 		// Declare your input
 		
+		int a=153;
 		
 		// Declare 3 more int variables as calculated, remainder, original (Tip: Initialize calculated alone)
-		
+		int calculated =1;
+		int remainder;
+		int original;
 		
 		// Assign input into variable original 
 		
 		
 		// Use loop to calculate: which loop to use until the number greater than 0??
+		while(a>0)    
+		{    
+			
+		}    
 		
 			// Within loop: get the remainder when done by 10 (Tip: Use Mod operator)
 			

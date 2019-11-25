@@ -22,9 +22,18 @@ public class FibonacciSeries {
 	public static void main(String[] args) {
 		
 		// initialize 3 int variables (Tip: range & firstNum, secNum in the series)
-		
+		int a=8;
 		// Iterate from 1 to the range
-		
+		int firstnum=0;;
+		int secnum=1;
+		int sum;
+		for(int i=1; i<=8; i++)
+		{
+			System.out.println(firstnum);
+			sum= firstnum+secnum;
+			firstnum=secnum;
+			secnum= sum;
+		}
 			// Print first number 
 			
 			// add first and second number
