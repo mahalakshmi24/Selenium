@@ -14,7 +14,7 @@ public class erailList {
 public static void main(String[] args) throws InterruptedException {
 	System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 	  ChromeDriver driver = new ChromeDriver();
-	  driver.manage().window().
+	 // driver.manage().window().
 	    //Loading a url
 	    driver.get("https://erail.in/");
 	    driver.manage().window().maximize();

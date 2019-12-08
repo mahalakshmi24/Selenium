@@ -15,7 +15,7 @@ public class FlipkartMouseHover {
 		driver.findElementByXPath("//button[@class='_2AkmmA _29YdH8']").click();
 		Actions builder = new Actions(driver);
 		WebElement Ele = driver.findElementByXPath("//span[text()='Electronics']");
-		WebElement mi = driver.findElementByXPath("//a[text()='Mi']");
+		WebElement mi = driver.findElementByXPath("//a[@title='Mi']");
 		builder.moveToElement(Ele);
 		Thread.sleep(2000);
 		builder.click(mi).perform();
