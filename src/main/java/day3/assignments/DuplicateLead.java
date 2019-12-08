@@ -4,7 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class DuplicateLead {
-	public static void main(String[] args)
+	public static void main(String[] args) throws InterruptedException
 	{
 		System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver.exe");
 
@@ -27,17 +27,20 @@ public class DuplicateLead {
 				driver.findElementByLinkText("Find Leads").click();
 				driver.findElementByLinkText("Email").click();
 				WebElement mailid = driver.findElementByName("emailAddress");
-				mailid.sendKeys("sthesiva88@gmail.com");
-				driver.findElementByLinkText("Find Leads").click();
-				
-				WebElement text1 = driver.findElementByLinkText("Sam");
+				mailid.sendKeys("DemoLeadB@DemoLeadB.com");
+				driver.findElementByXPath("//button[text()='Find Leads']").click();
+				Thread.sleep(2000);
+//				System.out.println();
+				WebElement text1 = driver.findElementByXPath("//div[@class='x-grid3-cell-inner x-grid3-col-firstName']/a");
 				String capturedtext= text1.getText();
 				System.out.println(capturedtext);
+				Thread.sleep(2000);
 				text1.click();
 				driver.findElementByLinkText("Duplicate Lead").click();
 				System.out.println(driver.getTitle());
-				driver.findElementByClassName("smallSubmit").click();
-				
+				driver.findElementById("createLeadForm_companyName").sendKeys("Abdc");
+						driver.findElementByClassName("smallSubmit").click();
+				Thread.sleep(2000);
 				WebElement text2= driver.findElementById("viewLead_firstName_sp");
 				String leadname= text2.getText();
 				System.out.println(leadname);
@@ -45,6 +48,8 @@ public class DuplicateLead {
 				{
 					System.out.println("same");
 				}
+				else
+					System.out.println("not same");
 				driver.close();					
 	}
 

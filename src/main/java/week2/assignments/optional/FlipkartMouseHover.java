@@ -1,10 +1,10 @@
-package day4.classroom;
+package week2.assignments.optional;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class Flipkart {
+public class FlipkartMouseHover {
 
 	public static void main(String[] args) throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
@@ -15,14 +15,9 @@ public class Flipkart {
 		driver.findElementByXPath("//button[@class='_2AkmmA _29YdH8']").click();
 		Actions builder = new Actions(driver);
 		WebElement Ele = driver.findElementByXPath("//span[text()='Electronics']");
-		WebElement apple = driver.findElementByXPath("//a[text()='Apple']");
+		WebElement mi = driver.findElementByXPath("//a[text()='Mi']");
 		builder.moveToElement(Ele);
 		Thread.sleep(2000);
-		builder.click(apple).perform();
-
-		
-		//
-
+		builder.click(mi).perform();
 	}
-
 }
